@@ -1,0 +1,8 @@
+/* Reset must come first */
+@import "./reset/index.css";
+
+@import "../../framework/variables/index.css";
+
+body {
+  background: white;
+}

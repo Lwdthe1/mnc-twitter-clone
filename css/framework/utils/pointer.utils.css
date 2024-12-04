@@ -1,0 +1,7 @@
+.u-pointerEventsNone {
+  pointer-events: none !important;
+}
+
+.u-pointerEventsAll {
+  pointer-events: all !important;
+}

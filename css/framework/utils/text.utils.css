@@ -1,0 +1,11 @@
+.u-textOverflowDots {
+    text-overflow: ellipsis !important;
+    /* Required for text-overflow to do anything */
+    white-space: nowrap !important;
+    overflow: hidden !important;
+  }
+  
+  .u-textTransformUppercase,
+  .u-uppercase {
+    text-transform: uppercase !important;
+  }

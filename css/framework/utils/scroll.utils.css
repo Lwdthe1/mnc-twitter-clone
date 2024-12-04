@@ -1,0 +1,3 @@
+.u-noScrollbar ::-webkit-scrollbar-thumb {
+    background: transparent !important;
+}
