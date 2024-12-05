@@ -31,7 +31,9 @@
             src="../img/brand/logo_wordmark_white_green.png"
           />
         </div>
-        <div class="layout-page-3c__column-content">
+        <div
+          class="layout-page-3c__column-content layout-page-3c__column-content--left"
+        >
           <ul class="nav-list">
             <li>
               <a class="nav-link nav-link--active" href="./">
@@ -45,6 +47,8 @@
                 <span>Profile</span>
               </a>
             </li>
+          </ul>
+          <ul class="nav-list">
             <li>
               <a class="nav-link" href="./settings.html">
                 <i class="fa fa-gear"></i>
@@ -65,10 +69,10 @@
         >
           <div class="composer">
             <div class="composer__column-1">
-              <img
+              <div
                 class="composer__avatar"
                 data-image-source="currentUser.imageUrl"
-              />
+              ></div>
             </div>
             <div class="composer__column-2">
               <textarea
@@ -86,7 +90,11 @@
                   <input class="u-hide js-composerPickImageInput" type="file" />
                 </div>
                 <div class="u-flex u-flex1 u-justifyContentFlexEnd">
-                  <button class="button button-pill">Send</button>
+                  <button
+                    class="button button-pill button-pill--bold u-fontSize12 u-fontWeight600"
+                  >
+                    Send
+                  </button>
                 </div>
               </div>
             </div>
@@ -102,7 +110,7 @@
             <div class="card-header">
               <h2 class="card-header__text">Cloud 9</h2>
             </div>
-            <div class="card-body">
+            <div class="card-body u-gap20">
               <div>Post 1</div>
               <div>Post 2</div>
             </div>

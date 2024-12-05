@@ -14,7 +14,10 @@
   width: 33px;
   border-radius: 50%;
   border: 2px solid var(--color-white);
-  background: var(--color-gray-light-3x);
+  background-color: var(--color-gray-light-3x);
+  background-image: url("../../../img/brand/logo_icon.png");
+  background-position: center;
+  background-size: cover;
 }
 .composer__column-2 {
   flex-basis: 100%;

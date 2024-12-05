@@ -43,9 +43,14 @@
 }
 
 .layout-page-3c__column-content {
+  display: flex;
+  flex-direction: column;
   padding: 20px;
   height: 100%;
   padding-bottom: 100px;
+}
+.layout-page-3c__column-content--left {
+  justify-content: space-between;
 }
 .layout-page-3c__column-content--middle {
   border-left: 1px solid var(--color-gray-light-2x);
