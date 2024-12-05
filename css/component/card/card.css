@@ -16,6 +16,8 @@
 }
 
 .card-body {
+  display: flex;
+  flex-direction: column;
   border-top: 1px solid var(--color-gray-lighter);
   padding: 1px;
   padding-top: 10px;

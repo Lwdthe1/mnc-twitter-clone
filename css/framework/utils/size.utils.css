@@ -12,6 +12,16 @@
   height: 100vh !important;
 }
 
+.u-width50pct {
+  width: 50% !important;
+}
+.u-width70pct {
+  width: 70% !important;
+}
+.u-width80pct {
+  width: 80% !important;
+}
+
 .u-sizeFull {
   height: 100% !important;
   width: 100% !important;
