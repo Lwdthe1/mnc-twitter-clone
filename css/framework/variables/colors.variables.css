@@ -20,7 +20,8 @@
   --color-white: #ffffff;
   --color-gray: #95a5a6;
   --color-gray-light: #bdc3c7;
-  --color-gray-lighter: #ecf0f1;
+  --color-gray-light-2x: #ecf0f1;
+  --color-gray-light-3x: #f5f6fa;
   --color-gray-dark: #7f8c8d;
 
   --color-primary: var(--color-green);

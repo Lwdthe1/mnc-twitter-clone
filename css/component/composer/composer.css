@@ -4,15 +4,17 @@
   background: var(--color-white);
   border-radius: 4px;
   padding: 10px 12px;
+  box-shadow: 0 5px 30px -6px rgba(0, 0, 0, 0.15);
 }
 .composer__column-1 {
   flex-grow: 0;
 }
 .composer__avatar {
   height: 32px;
-  width: 32px;
+  width: 33px;
   border-radius: 50%;
   border: 2px solid var(--color-white);
+  background: var(--color-gray-light-3x);
 }
 .composer__column-2 {
   flex-basis: 100%;
@@ -22,7 +24,7 @@
   resize: none;
   width: 100%;
   padding: 10px 12px;
-  background: var(--color-gray-lighter);
+  background: var(--color-gray-light-3x);
 }
 
 .composer__footer {

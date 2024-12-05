@@ -2,24 +2,25 @@
   display: flex;
   height: 100vh;
   width: 100%;
-  background: var(--color-gray-light);
+  background: var(--color-gray-light-2x);
   overflow: hidden;
 }
 
 .layout-page-3c__column-1 {
-  background: var(--color-gray-dark);
-  color: var(--color-white);
+  background: var(--color-white);
+  color: var(--color-black);
   flex-basis: 20%;
 }
 
 .layout-page-3c__column-2 {
   flex-basis: 55%;
   flex-shrink: 0;
-  overflow: scroll;
+
+  background-color: var(--color-gray-light-3x);
 }
 
 .layout-page-3c__column-3 {
-  background: var(--color-gray-dark);
+  background: var(--color-white);
   color: var(--color-white);
   flex-basis: 25%;
 }
@@ -43,4 +44,11 @@
 
 .layout-page-3c__column-content {
   padding: 20px;
+  height: 100%;
+  padding-bottom: 100px;
+}
+.layout-page-3c__column-content--middle {
+  border-left: 1px solid var(--color-gray-light-2x);
+  border-right: 1px solid var(--color-gray-light-2x);
+  overflow: scroll;
 }

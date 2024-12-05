@@ -80,7 +80,7 @@ textarea {
 
   padding: 5px 10px;
 
-  background: var(--color-gray-lighter);
+  background: var(--color-gray-light-2x);
   border-radius: 4px;
   color: var(--color-black);
 }
