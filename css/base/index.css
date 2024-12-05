@@ -1,8 +1,83 @@
 /* Reset must come first */
 @import "./reset/index.css";
 
-@import "../../framework/variables/index.css";
+@import "../framework/variables/index.css";
 
 body {
-  background: white;
+  background: var(--color-white);
+  padding: 0;
+  margin: 0;
 }
+
+/** --- Base button styles -- */
+
+button {
+  font-size: 14px;
+  letter-spacing: 0;
+  font-weight: 400;
+  font-style: normal;
+  text-decoration: none;
+  cursor: pointer;
+  color: inherit;
+  margin: 0;
+  padding: 0;
+  border: none;
+  text-decoration: none;
+  background: 0 0;
+  background-color: none;
+  outline: none;
+}
+button:focus {
+  box-shadow: none;
+}
+button:hover {
+  opacity: 0.9;
+}
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+/** ---END Base button styles -- */
+
+/** --- Base link styles -- */
+
+a {
+  transition: color 350ms;
+  text-decoration: none;
+  cursor: pointer;
+  color: var(--color-green);
+}
+a:hover {
+  text-decoration: none;
+  color: var(--color-green-dark);
+}
+
+/** ---END Base button styles -- */
+
+/** --- Base input styles -- */
+
+input {
+  font-size: inherit;
+  letter-spacing: 0;
+  font-weight: 400;
+  font-style: normal;
+  text-decoration: none;
+  cursor: pointer;
+  color: inherit;
+  margin: 0;
+  border: none;
+  text-decoration: none;
+  background: 0 0;
+  background-color: none;
+  box-shadow: none;
+  outline: none;
+
+  padding: 5px 10px;
+
+  background: var(--color-gray-lighter);
+  border-radius: 4px;
+  color: var(--color-black);
+}
+
+/** ---END Base input styles -- */

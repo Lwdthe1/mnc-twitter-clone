@@ -1,2 +1,2 @@
-body {
-}
+@import "../../component/button/index.css";
+@import "../../component/pageLayout/threeColumns.css";

@@ -1,27 +1,43 @@
 .u-minWidthFitContent {
-	min-width: fit-content !important;
+  min-width: fit-content !important;
 }
 
 .u-height0 {
-	height: 0 !important;
+  height: 0 !important;
+}
+.u-height100pct {
+  height: 100% !important;
 }
 .u-height100vh {
-	height: 100vh !important;
+  height: 100vh !important;
+}
+
+.u-sizeFull {
+  height: 100% !important;
+  width: 100% !important;
+}
+.u-sizeFullHeight,
+.u-height100pct {
+  height: 100% !important;
+}
+.u-sizeFullWidth,
+.u-width100pct {
+  width: 100% !important;
 }
 
 .u-size14 {
-	height: 14px !important;
-	width: 14px !important;
+  height: 14px !important;
+  width: 14px !important;
 }
 .u-size20 {
-	height: 20px !important;
-	width: 20px !important;
+  height: 20px !important;
+  width: 20px !important;
 }
 .u-size32 {
-	height: 32px !important;
-	width: 32px !important;
+  height: 32px !important;
+  width: 32px !important;
 }
 .u-size110 {
-	height: 110px !important;
-	width: 110px !important;
+  height: 110px !important;
+  width: 110px !important;
 }
