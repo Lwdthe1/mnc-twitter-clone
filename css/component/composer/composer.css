@@ -1,0 +1,30 @@
+.composer {
+  display: flex;
+  gap: 10px;
+  background: var(--color-white);
+  border-radius: 4px;
+  padding: 10px 12px;
+}
+.composer__column-1 {
+  flex-grow: 0;
+}
+.composer__avatar {
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  border: 2px solid var(--color-white);
+}
+.composer__column-2 {
+  flex-basis: 100%;
+  flex-grow: 1;
+}
+.composer__textarea {
+  resize: none;
+  width: 100%;
+  padding: 10px 12px;
+  background: var(--color-gray-lighter);
+}
+
+.composer__footer {
+  padding: 10px;
+}

@@ -1,12 +1,16 @@
 /* Reset must come first */
 @import "./reset/index.css";
 
+/* Import FontAwesome icons from CDN */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+
 @import "../framework/variables/index.css";
 
 body {
   background: var(--color-white);
   padding: 0;
   margin: 0;
+  font-family: Verdana, Tahoma, Arial, sans-serif;
 }
 
 /** --- Base button styles -- */
@@ -57,7 +61,8 @@ a:hover {
 
 /** --- Base input styles -- */
 
-input {
+input,
+textarea {
   font-size: inherit;
   letter-spacing: 0;
   font-weight: 400;

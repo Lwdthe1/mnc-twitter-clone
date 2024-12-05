@@ -1,0 +1,15 @@
+.u-inline {
+  display: inline !important;
+}
+
+.u-inlineBlock {
+  display: inline-block !important;
+}
+
+.u-block {
+  display: block !important;
+}
+
+.u-hide {
+  display: none !important;
+}

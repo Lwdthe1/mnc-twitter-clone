@@ -1,7 +1,7 @@
 /* The base must come first on every page */
-@import "../../base/index.css";
+@import "../../base/base.css";
 
-@import "./styles.css";
+@import "./home.css";
 
 /* Utils must come last on every page */
 @import "../../framework/utils/index.css";

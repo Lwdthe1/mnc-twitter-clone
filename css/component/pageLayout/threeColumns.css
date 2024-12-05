@@ -16,7 +16,6 @@
   flex-basis: 55%;
   flex-shrink: 0;
   overflow: scroll;
-  text-align: center;
 }
 
 .layout-page-3c__column-3 {
@@ -26,7 +25,10 @@
 }
 
 .layout-page-3c__column-topbar {
-  padding: 10px;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  padding-left: 20px;
   height: 45px;
   overflow: hidden;
   color: var(--color-white);
@@ -40,5 +42,5 @@
 }
 
 .layout-page-3c__column-content {
-  padding: 10px;
+  padding: 20px;
 }
