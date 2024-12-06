@@ -1,4 +1,4 @@
 import "../base.js";
-import * as controller from "./home.js";
+import * as controller from "./profile.js";
 
 window.controller = controller;

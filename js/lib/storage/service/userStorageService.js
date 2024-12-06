@@ -7,6 +7,11 @@ const getCurrentUser = () => {
   return currentUser || null;
 };
 
+const setCurrentUser = (user) => {
+  const key = storage.createItemKey(StorageItemType.CurrentUser);
+  storage.setItem(key, user);
+};
+
 const getAllUsers = () => {
   const allUsers = storage.getItemsByType(StorageItemType.User);
   return allUsers;
@@ -26,6 +31,7 @@ const shapeUserForStorage = ({ id, data }) => {
 };
 
 export const usersStorageService = {
+  setCurrentUser,
   getCurrentUser,
   getAllUsers: getAllUsers,
   shapeUserForStorage,

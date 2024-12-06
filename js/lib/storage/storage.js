@@ -1,3 +1,5 @@
+import { generateUniqueId } from "../utils/uuid.js";
+
 class Storage {
   setItem(key, value) {
     try {
@@ -28,7 +30,7 @@ class Storage {
   }
 
   createItemKey(type) {
-    const id = Date.now();
+    const id = generateUniqueId();
     return { storageKey: `${type}:${id}`, id };
   }
 

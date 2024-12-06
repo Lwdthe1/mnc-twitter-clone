@@ -13,10 +13,11 @@ const {
   getRemoveImageButtonElement,
 } = queryHelper;
 
+const newPostData = { selectedImageUrl: "" };
+
 export function createPost() {
   const textAreaElement = getTextAreaElement();
-  const selectedImageElement = getImageElement();
-  const selectedImageUrl = selectedImageElement.src;
+  const selectedImageUrl = newPostData.selectedImageUrl;
 
   const text = textAreaElement.value;
 
@@ -91,6 +92,7 @@ export function onImageInputChange() {
   reader.onloadend = () => {
     const removeImageButtonElement = getRemoveImageButtonElement();
     selectedImageElement.src = reader.result;
+    newPostData.selectedImageUrl = reader.result;
 
     selectedImageElement.classList.remove("u-hide");
     removeImageButtonElement.classList.remove("u-hide");
@@ -104,6 +106,7 @@ export function removeSelectedImage() {
   const selectedImageElement = getImageElement();
   const removeImageButtonElement = getRemoveImageButtonElement();
 
+  newPostData.selectedImageUrl = "";
   selectedImageElement.src = "";
   imageInputElement.value = null;
 

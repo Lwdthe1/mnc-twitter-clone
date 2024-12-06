@@ -1,0 +1,14 @@
+@import "../../component/button/button.css";
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  gap: 30px;
+}
+
+.signup-form__credentials-group {
+  border-top: 1px solid var(--color-gray-light-2x);
+  padding-top: 30px;
+}
