@@ -21,6 +21,7 @@
     <link rel="icon" type="image/x-icon" href="../img/brand/logo_favicon.png" />
 
     <link rel="stylesheet" href="../css/page/home/index.css" />
+    <script type="module" src="../js/page/home/index.js"></script>
   </head>
   <body>
     <div class="layout-page-3c">
@@ -76,22 +77,42 @@
             </div>
             <div class="composer__column-2">
               <textarea
-                class="composer__textarea"
+                class="composer__textarea js-composerTextArea"
                 rows="3"
                 placeholder="What's up?"
               ></textarea>
+              <div class="u-relative">
+                <img
+                  class="composer__selectedImage u-hide js-composerSelectedImage"
+                />
+                <button
+                  class="button button-pill u-backgroundColorRed u-absolute u-bottom10 u-left10 u-fontSize10 u-paddingY5 u-paddingX5 u-borderRadius4 u-hide js-composerRemoveSelectedImageButton"
+                  onclick="controller.composerService.removeSelectedImage()"
+                >
+                  <i class="fa fa-trash"></i>
+                </button>
+              </div>
               <div
                 class="composer__footer u-flexCenteredItemsY u-justifyContentSpaceBetween"
               >
                 <div>
-                  <button class="js-composerPickImageButton">
+                  <button
+                    class="js-composerSelectImageButton"
+                    onclick="controller.composerService.onSelectImageButtonClick()"
+                  >
                     <i class="fa fa-image"></i>
                   </button>
-                  <input class="u-hide js-composerPickImageInput" type="file" />
+                  <input
+                    class="u-hide js-composerImageInput"
+                    type="file"
+                    accept="image/*"
+                    onchange="controller.composerService.onImageInputChange()"
+                  />
                 </div>
                 <div class="u-flex u-flex1 u-justifyContentFlexEnd">
                   <button
                     class="button button-pill button-pill--bold u-fontSize12 u-fontWeight600"
+                    onclick="controller.composerService.createPost()"
                   >
                     Send
                   </button>
@@ -99,6 +120,7 @@
               </div>
             </div>
           </div>
+          <div class="u-flexColumn u-gap30 js-mainPostsFeed"></div>
         </div>
       </div>
       <div class="layout-page-3c__column-3">

@@ -1,7 +1,9 @@
 @import "./size.utils.css";
 @import "./margin.utils.css";
 @import "./padding.utils.css";
+@import "./border.utils.css";
 @import "./display.utils.css";
+@import "./position.utils.css";
 @import "./flex.utils.css";
 @import "./font-size.utils.css";
 @import "./font-weight.utils.css";

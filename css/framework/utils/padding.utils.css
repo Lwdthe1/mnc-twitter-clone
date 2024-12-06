@@ -1,3 +1,9 @@
+.u-padding0 {
+  padding: 0px !important;
+}
+.u-padding5 {
+  padding: 5px !important;
+}
 .u-padding10 {
   padding: 10px !important;
 }
@@ -43,4 +49,9 @@
 .u-paddingX40 {
   padding-left: 40px !important;
   padding-right: 40px !important;
+}
+
+.u-paddingY5 {
+  padding-top: 5px !important;
+  padding-bottom: 5px !important;
 }
