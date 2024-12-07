@@ -1,24 +1,38 @@
 import { usersStorageService } from "../storage/service/userStorageService.js";
 
+const MIN_PASSWORD_LENGTH = 6;
+
 const getCurrentUser = () => {
   return usersStorageService.getCurrentUser();
 };
 
-const signupUser = ({
-  username,
-  password,
-  passwordConfirmation,
-  firstName,
-  lastName,
-}) => {
+const signupUser = (data) => {
+  const { passwordConfirmation, firstName, lastName } = data;
+  const username = data.username.trim();
+  const password = data.password.trim();
+
   const allUsers = usersStorageService.getAllUsers();
 
-  const existingUser = allUsers.find((user) => {
+  const existingUserByUsername = allUsers.find((user) => {
     return username === user.username;
   });
 
-  if (existingUser) {
+  if (existingUserByUsername) {
     throw new Error("That username is already taken.");
+  }
+
+  if (password.length < MIN_PASSWORD_LENGTH) {
+    throw new Error(
+      `Your password must be at least ${MIN_PASSWORD_LENGTH} characters long.`
+    );
+  }
+
+  if (password !== passwordConfirmation) {
+    throw new Error("Your password confirmation is invalid.");
+  }
+
+  if (!firstName.trim()) {
+    throw new Error("You must provide your first name.");
   }
 
   const newUser = {

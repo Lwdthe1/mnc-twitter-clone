@@ -8,8 +8,8 @@ const getCurrentUser = () => {
 };
 
 const setCurrentUser = (user) => {
-  const key = storage.createItemKey(StorageItemType.CurrentUser);
-  storage.setItem(key, user);
+  const { storageKey, id } = storage.createItemKey(StorageItemType.CurrentUser);
+  storage.setItem(storageKey, shapeUserForStorage({ id, data: user }));
 };
 
 const getAllUsers = () => {
@@ -21,13 +21,14 @@ const getAllUsers = () => {
  * Shapes the data into a User record for the database
  */
 const shapeUserForStorage = ({ id, data }) => {
-  const { name, imageUrl } = data;
+  const newUser = Object.entries(data).reduce((user, [key, value]) => {
+    user[key] = value && value.trim ? value.trim() : value;
+    return user;
+  }, {});
 
-  const user = { username, name, imageUrl, password };
+  newUser.id = id;
 
-  user.id = id;
-
-  return user;
+  return newUser;
 };
 
 export const usersStorageService = {

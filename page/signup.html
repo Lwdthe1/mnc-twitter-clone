@@ -39,31 +39,41 @@
       <form class="signup-form" onsubmit="controller.onSubmitSignupForm">
         <div class="u-flexColumn u-gap10">
           <div>
-            <input placeholder="First Name" />
+            <input type="text" placeholder="First Name" name="firstName" />
           </div>
 
           <div>
-            <input placeholder="Last Name" />
+            <input type="text" placeholder="Last Name" name="lastName" />
           </div>
         </div>
         <div
           class="signup-form__credentials-group u-flexColumn u-gap20 u-paddingTop10"
         >
           <div>
-            <input placeholder="Username" />
+            <input type="text" placeholder="Username" name="username" />
           </div>
           <div class="u-flexColumn u-gap10">
             <div>
-              <input placeholder="Password" />
+              <input type="password" placeholder="Password" name="password" />
             </div>
-            <div><input placeholder="Confirm Password" /></div>
+            <div>
+              <input
+                type="password"
+                placeholder="Confirm Password"
+                name="passwordConfirmation"
+              />
+            </div>
           </div>
         </div>
 
         <div
           class="u-flexCenteredItems u-flexDirectionColumn u-sizeFullWidth u-gap20"
         >
-          <button class="button button-pill button-pill--bold">Sign Up</button>
+          <button
+            class="button button-pill button-pill--bold js-submitSignupButton"
+          >
+            Sign Up
+          </button>
           <a class="u-fontSize11 u-textColorBlack" href="./login.html">
             Have an Account? Login
             <i class="fa fa-chevron-right u-fontSize8"></i>

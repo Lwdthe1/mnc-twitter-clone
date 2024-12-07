@@ -1,3 +1,4 @@
+import { navigateToLoginPage } from "../router/router.js";
 import { usersService } from "../users/userService.js";
 
 const ensureAuthedUserOrRedirect = () => {
@@ -24,29 +25,11 @@ const ensureAuthedUserOrRedirect = () => {
   // Run the logout process to ensure all clean up is completed.
   usersService.logoutUser();
 
-  window.location.href = "/page/login.html";
+  navigateToLoginPage();
 };
 
 setTimeout(() => {
-  const bodyElement = document.querySelector("body");
-
-  const loadingOverlayElement = document.createElement("div");
-  loadingOverlayElement.style.position = "fixed";
-  loadingOverlayElement.style.top = 0;
-  loadingOverlayElement.style.left = 0;
-  loadingOverlayElement.style.width = "100vw";
-  loadingOverlayElement.style.height = "100vh";
-  loadingOverlayElement.style.background = "red";
-
-  loadingOverlayElement.setAttribute(
-    "data-is-authenticator-loading-overlay",
-    "true"
-  );
-  bodyElement.append(loadingOverlayElement);
-
   ensureAuthedUserOrRedirect();
-
-  bodyElement.removeChild(loadingOverlayElement);
 }, 0);
 
 export {};
