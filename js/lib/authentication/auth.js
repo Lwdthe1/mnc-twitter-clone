@@ -1,12 +1,8 @@
-import { navigateToLoginPage } from "../router/router.js";
+import { navigateToHomePage, navigateToLoginPage } from "../router/router.js";
 import { usersService } from "../users/userService.js";
 
 const ensureAuthedUserOrRedirect = () => {
   const currentUser = usersService.getCurrentUser();
-
-  if (currentUser) {
-    return;
-  }
 
   const currentPathParts = window.location.pathname.toLowerCase().split("/");
 
@@ -16,7 +12,16 @@ const ensureAuthedUserOrRedirect = () => {
   const isLoginPage = currentPathParts[1] === "login.html";
   const isSignupPage = currentPathParts[1] === "signup.html";
 
-  if (isLoginPage || isSignupPage) {
+  const isAuthPage = isLoginPage || isSignupPage;
+  if (currentUser) {
+    if (isAuthPage) {
+      navigateToHomePage();
+    }
+
+    return;
+  }
+
+  if (isAuthPage) {
     return;
   }
 
